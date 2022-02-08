@@ -14,6 +14,8 @@ driver.get('https://store.steampowered.com/search/?filter=topsellers&os=win')
 time.sleep(1)
 SCROLL_PAUSE_SEC = 1
 
+print("brah")
+
 # 스크롤 높이 가져옴
 last_height = driver.execute_script("return document.body.scrollHeight")
 
