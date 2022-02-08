@@ -14,6 +14,8 @@ driver.get('https://store.steampowered.com/search/?filter=topsellers&os=win')
 time.sleep(1)
 SCROLL_PAUSE_SEC = 1
 
+print('newwwww')
+
 # 스크롤 높이 가져옴
 last_height = driver.execute_script("return document.body.scrollHeight")
 
@@ -166,7 +168,7 @@ for row in rows:
                         req_rec_stor = sys_req[i].text.replace('Storage: ','')
                         print(req_rec_stor)
 
-                '---언어'
+                print('---언어')
                 languages = rightcol.find_element(By.CLASS_NAME, 'game_language_options').find_elements(By.TAG_NAME, 'tr')
                 for language in languages[1:]:
                     print(language.find_elements(By.TAG_NAME, 'td')[0].get_attribute('innerHTML').replace('\r','').replace('\n','').replace('\t',''))
